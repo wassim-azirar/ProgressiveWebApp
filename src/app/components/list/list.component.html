@@ -1,0 +1,15 @@
+<mat-card *ngFor="let coffee of coffeeList">
+  <mat-card-title>{{coffee.name}}</mat-card-title>
+  <mat-card-subtitle>Place : {{coffee.place}}</mat-card-subtitle>
+  <mat-card-actions>
+    <button md-button>
+      <mat-icon>map</mat-icon>
+    </button>
+    <button md-button>
+      <mat-icon>share</mat-icon>
+    </button>
+    <button md-button>
+      <mat-icon>list</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

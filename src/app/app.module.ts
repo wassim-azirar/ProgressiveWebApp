@@ -1,25 +1,34 @@
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { CoffeeComponent } from './components/coffee/coffee.component';
+import { DataService } from './services/data.service';
+import { GeolocationService } from './services/geolocation.service';
+import { ListComponent } from './components/list/list.component';
 import {
   MatButtonModule,
+  MatCardModule,
   MatCheckboxModule,
-  MatToolbarModule,
   MatIconModule,
   MatInputModule,
   MatSelectModule,
   MatSliderModule,
   MatSlideToggleModule,
-  MatCardModule
+  MatToolbarModule
 } from '@angular/material';
-import { DataService } from './services/data.service';
-import { GeolocationService } from './services/geolocation.service';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import 'hammerjs';
 
+const routes: Routes = [
+  { path: '', component: ListComponent },
+  { path: 'coffee', component: CoffeeComponent },
+  { path: 'coffee/:id', component: CoffeeComponent }
+];
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ListComponent, CoffeeComponent],
   imports: [
     BrowserModule,
     MatButtonModule,
@@ -30,7 +39,8 @@ import 'hammerjs';
     MatSelectModule,
     MatSliderModule,
     MatCardModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [GeolocationService, DataService],
   bootstrap: [AppComponent]

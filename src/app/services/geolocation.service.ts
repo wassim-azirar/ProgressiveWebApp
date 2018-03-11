@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { PlaceLocation } from '../logic/placeLocation';
 
 @Injectable()
 export class GeolocationService {
