@@ -1,9 +1,12 @@
 class Coffee {
-  name: string;
-  place: string;
   type: string;
-  location: PlaceLocation;
   rating: number;
   notes: string;
   tastingRating: TastingRating;
+
+  constructor(
+    public name: string,
+    public place: string,
+    public location: PlaceLocation
+  ) {}
 }
