@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Coffee } from '../../logic/coffee';
 import { GeolocationService } from '../../services/geolocation.service';
 import { TastingRating } from '../../logic/tastingRating';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-coffee',
@@ -12,6 +13,7 @@ import { TastingRating } from '../../logic/tastingRating';
 export class CoffeeComponent implements OnInit, OnDestroy {
   private routingSubscription: any;
   public coffee: Coffee;
+  public tastingEnabled = false;
   public types: Array<string> = [
     'Espresso',
     'Ristretto',
@@ -22,13 +24,23 @@ export class CoffeeComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private geolocation: GeolocationService
+    private geolocation: GeolocationService,
+    private dataService: DataService,
+    private router: Router
   ) {}
 
   ngOnInit() {
     this.coffee = new Coffee();
     this.routingSubscription = this.route.params.subscribe(params => {
-      console.log(params['id']);
+      const coffeeId = params['id'];
+      if (coffeeId) {
+        this.dataService.get(coffeeId, response => {
+          this.coffee = response;
+          if (this.coffee.tastingRating) {
+            this.tastingEnabled = true;
+          }
+        });
+      }
     });
 
     this.geolocation.requestLocation(location => {
@@ -48,11 +60,15 @@ export class CoffeeComponent implements OnInit, OnDestroy {
   }
 
   cancel() {
-    console.log('cancel');
+    this.router.navigate(['/']);
   }
 
   save() {
-    console.log('save');
+    this.dataService.save(this.coffee, result => {
+      if (result) {
+        this.router.navigate(['/']);
+      }
+    });
   }
 
   ngOnDestroy() {

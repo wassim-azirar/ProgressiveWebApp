@@ -21,6 +21,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import 'hammerjs';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
@@ -46,7 +48,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [GeolocationService, DataService],
+  providers: [GeolocationService, DataService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

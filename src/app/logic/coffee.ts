@@ -2,6 +2,7 @@ import { TastingRating } from './tastingRating';
 import { PlaceLocation } from './placeLocation';
 
 export class Coffee {
+  _id: string;
   type: string;
   rating: number;
   notes: string;
