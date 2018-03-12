@@ -2,14 +2,18 @@
   <mat-card-title>{{coffee.name}}</mat-card-title>
   <mat-card-subtitle>Place : {{coffee.place}}</mat-card-subtitle>
   <mat-card-actions>
-    <button md-button>
+    <button mat-button>
       <mat-icon>map</mat-icon>
     </button>
-    <button md-button>
+    <button mat-button>
       <mat-icon>share</mat-icon>
     </button>
-    <button md-button>
+    <button mat-button>
       <mat-icon>list</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>
+
+<a mat-fab routerLink="/coffee" class="btn-create">
+  <mat-icon>create</mat-icon>
+</a>

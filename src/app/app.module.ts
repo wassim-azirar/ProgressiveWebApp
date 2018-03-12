@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CoffeeComponent } from './components/coffee/coffee.component';
 import { DataService } from './services/data.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GeolocationService } from './services/geolocation.service';
 import { ListComponent } from './components/list/list.component';
 import {
@@ -31,6 +32,8 @@ const routes: Routes = [
   declarations: [AppComponent, ListComponent, CoffeeComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
@@ -40,6 +43,7 @@ const routes: Routes = [
     MatSliderModule,
     MatCardModule,
     MatSlideToggleModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [GeolocationService, DataService],
