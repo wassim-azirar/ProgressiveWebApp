@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class DataService {
-  private endpoint = 'http://localhost:3000';
+  private endpoint = 'http://pwa-api-server.azurewebsites.net/';
 
   constructor(private httpClient: HttpClient) {}
 
