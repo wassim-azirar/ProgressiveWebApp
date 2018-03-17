@@ -1,0 +1,9 @@
+{
+  "name": "Progressive Web App",
+  "short_name": "PWA",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "scope": "/"
+}
