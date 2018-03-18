@@ -7,7 +7,11 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": ["assets", "manifest.json", "icons"],
+      "assets": [
+        "assets",
+        "manifest.json",
+        "icons"
+      ],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -15,7 +19,10 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
-      "styles": ["styles.css"],
+      "serviceWorker": true,
+      "styles": [
+        "styles.css"
+      ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -50,6 +57,7 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+    }
   }
 }

@@ -5,7 +5,9 @@ import { CoffeeComponent } from './components/coffee/coffee.component';
 import { DataService } from './services/data.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GeolocationService } from './services/geolocation.service';
+import { environment } from '../environments/environment';
 import { ListComponent } from './components/list/list.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import {
   MatButtonModule,
   MatCardModule,
@@ -15,7 +17,8 @@ import {
   MatSelectModule,
   MatSliderModule,
   MatSlideToggleModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatSnackBarModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -33,6 +36,9 @@ const routes: Routes = [
   declarations: [AppComponent, ListComponent, CoffeeComponent],
   imports: [
     BrowserModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {
+      enabled: environment.production
+    }),
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
@@ -43,6 +49,7 @@ const routes: Routes = [
     MatInputModule,
     MatSelectModule,
     MatSliderModule,
+    MatSnackBarModule,
     MatCardModule,
     MatSlideToggleModule,
     ReactiveFormsModule,

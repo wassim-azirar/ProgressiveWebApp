@@ -9,19 +9,19 @@
   "background_color": "#C0B764",
   "icons": [
     {
-      "src": "icon_96.png",
+      "src": "icons/icon_96.png",
       "sizes": "96x96"
     },
     {
-      "src": "icon_144.png",
+      "src": "icons/icon_144.png",
       "sizes": "144x144"
     },
     {
-      "src": "icon_192.png",
+      "src": "icons/icon_192.png",
       "sizes": "192x192"
     },
     {
-      "src": "icon_512.png",
+      "src": "icons/icon_512.png",
       "sizes": "512x512"
     }
   ]
