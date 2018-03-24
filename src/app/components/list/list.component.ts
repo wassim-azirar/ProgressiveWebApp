@@ -50,7 +50,6 @@ export class ListComponent implements OnInit {
         })
         .catch(error => console.log('Error sharing', error));
     } else {
-      console.log('trying to share using Whatsapp');
       const shareUrl = `whatsapp://send?text=${encodeURIComponent(shareText)}`;
       location.href = shareUrl;
     }

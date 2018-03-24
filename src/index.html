@@ -2,29 +2,32 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Progressive Web App</title>
+  <title>PWA</title>
   <base href="/">
+
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#472D21">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" type="image/png" href="icons/icon_96.png">
 
-  <!-- iOS Meta Tags for PWA -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="PWA">
-  <meta name="apple-mobile-web-app-title" content="PWA">
-  <meta name="msapplication-starturl" content="/">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" href="icons/icon_ios_180.png" sizes="180x180">
-  <link rel="apple-touch-icon" href="icons/icon_ios_120.png" sizes="120x120">
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-  <app-root></app-root>
+  <app-root>
+    <img
+      src="icons/icon_96.png"
+      srcset="icons/icon_144.png 3x, icons/icon_192.png 4x"
+      alt="PWA"
+      width="48"
+      height="48">
+
+    <h1>Progressive Web App</h1>
+    <h2>Please wait ...</h2>
+  </app-root>
 </body>
 
 </html>

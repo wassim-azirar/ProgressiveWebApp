@@ -39,7 +39,5 @@ export class DataService {
           callback(true);
         });
     }
-
-    // callback(true);
   }
 }

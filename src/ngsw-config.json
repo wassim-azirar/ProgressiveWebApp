@@ -1,35 +1,27 @@
 {
   "index": "/index.html",
-  "assetGroups": [
-    {
-      "name": "app",
-      "installMode": "prefetch",
-      "resources": {
-        "files": [
-          "/icons/icon_96.png",
-          "/icons/icon_144.png",
-          "/icons/icon_192.png",
-          "/icons/icon_512.png",
-          "/icons/icon_ios_120.png",
-          "/icons/icon_ios_180.png",
-          "/index.html"
-        ],
-        "versionedFiles": [
-          "/*.bundle.css",
-          "/*.bundle.js",
-          "/*.chunk.js",
-          "/*.woff2",
-          "/*.ttf"
-        ]
-      }
-    },
-    {
-      "name": "assets",
-      "installMode": "lazy",
-      "updateMode": "prefetch",
-      "resources": {
-        "files": ["/assets/**"]
-      }
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/favicon.ico",
+        "/index.html"
+      ],
+      "versionedFiles": [
+        "/*.bundle.css",
+        "/*.bundle.js",
+        "/*.chunk.js"
+      ]
     }
-  ]
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ]
+    }
+  }]
 }

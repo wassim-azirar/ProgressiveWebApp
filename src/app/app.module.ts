@@ -3,11 +3,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { CoffeeComponent } from './components/coffee/coffee.component';
 import { DataService } from './services/data.service';
+import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GeolocationService } from './services/geolocation.service';
-import { environment } from '../environments/environment';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ListComponent } from './components/list/list.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import {
   MatButtonModule,
   MatCardModule,
@@ -17,14 +17,14 @@ import {
   MatSelectModule,
   MatSliderModule,
   MatSlideToggleModule,
-  MatToolbarModule,
-  MatSnackBarModule
-} from '@angular/material';
+  MatSnackBarModule,
+  MatToolbarModule
+  } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { ServiceWorkerModule } from '@angular/service-worker';
 import 'hammerjs';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 
 const routes: Routes = [
   { path: '', component: ListComponent },
