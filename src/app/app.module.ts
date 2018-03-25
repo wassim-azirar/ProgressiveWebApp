@@ -1,3 +1,4 @@
+import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
@@ -39,6 +40,7 @@ const routes: Routes = [
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     }),
+    AngularFireModule.initializeApp(environment.firebase),
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
