@@ -12,6 +12,7 @@
         "service-worker.js",
         "manifest.json",
         "robots.txt",
+        "favicon.ico",
         "icons"
       ],
       "index": "index.html",
