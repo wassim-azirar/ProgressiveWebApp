@@ -1,5 +1,9 @@
 # ProgressiveWebApp
 
+## Live demo
+
+You can see it live at https://ng-web-pwa.firebaseapp.com/
+
 ## Requirement
 
 run `npm install -g @angular/cli` to use the Angular CLI
@@ -21,10 +25,6 @@ Run `ng build --prod` to build the project.
 The build artifacts will be stored in the `dist/` directory.
 
 Run `http-server -p 8080` inside the `dist/` and navigate to `http://localhost:8080/`
-
-## Live demo
-
-You can see it live at https://ng-web-pwa.firebaseapp.com/
 
 ## Screenshots
 
