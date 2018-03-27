@@ -27,3 +27,9 @@ Run `http-server -p 8080` inside the `dist/` and navigate to `http://localhost:8
 ## Live demo
 
 You can see it live at https://ng-web-pwa.firebaseapp.com/
+
+## Screenshots
+
+Home page             |  Coffee details
+:-------------------------:|:-------------------------:
+<img src="https://github.com/wassim-azirar/ProgressiveWebApp/blob/master/screenshots/home%20screen.png" alt="Home page">  |  <img src="https://github.com/wassim-azirar/ProgressiveWebApp/blob/master/screenshots/coffee%20details.png" alt="Cofee details">
