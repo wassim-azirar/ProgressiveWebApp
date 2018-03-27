@@ -1,0 +1,29 @@
+<form>
+  <mat-toolbar>
+    <span>Login page</span>
+  </mat-toolbar>
+
+  <mat-card class="social">
+    <button mat-raised-button class="btn btn-block" (click)="loginWithFacebook()">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      Login with Facebook
+    </button>
+
+    <button mat-raised-button class="btn btn-block" (click)="loginWithGoogle()">
+      <i class="fa fa-google" aria-hidden="true"></i>
+      Login with Google
+    </button>
+  </mat-card>
+
+  <mat-card>
+    Google :
+    <span>{{ googleUser.name }}</span>
+    <img width="48" [src]="googleUser?.picture">
+  </mat-card>
+
+  <mat-card>
+    Facebook :
+    <span>{{ facebookUser.name }}</span>
+    <img width="48" [src]="facebookUser?.picture?.data?.url">
+  </mat-card>
+</form>
