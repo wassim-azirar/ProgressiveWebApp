@@ -7,3 +7,7 @@
 mat-card {
   margin-top: 2px;
 }
+
+.create-action {
+  position: fixed !important;
+}
