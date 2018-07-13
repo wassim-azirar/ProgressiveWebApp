@@ -1,9 +1,5 @@
 # ProgressiveWebApp
 
-## Live demo
-
-You can see it live at https://ng-web-pwa.firebaseapp.com/
-
 ## Requirement
 
 run `npm install -g @angular/cli` to use the Angular CLI
